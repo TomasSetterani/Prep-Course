@@ -6,14 +6,14 @@ function crearGato (nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
-  let nuevoObjeto = {
+  let objeto = {
     nombre: nombre,
     edad: edad,
     meow: function meow(){
       return "Meow!"
     }
   } 
-  return nuevoObjeto;
+  return objeto; 
 }
 
 function agregarPropiedad (objeto, property) {
@@ -21,8 +21,8 @@ function agregarPropiedad (objeto, property) {
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
- objeto[property] = null;
- return objeto;
+objeto[property] = null;
+return objeto;
 }
 
 function invocarMetodo (objeto, metodo) {
@@ -30,7 +30,7 @@ function invocarMetodo (objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
- objeto[metodo]();
+objeto[metodo]();
 }
 
 function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
@@ -47,7 +47,7 @@ function eliminarPropiedad (objeto, unaPropiedad) {
   // Devuelve el objeto
   // Tu código:
   delete objeto[unaPropiedad];
-  return objeto;
+return objeto;
 }
 
 function nuevoUsuario (nombre, email, password) {
@@ -58,18 +58,18 @@ let objeto = {
   nombre: nombre,
   email: email,
   password: password
- }
- return objeto;
+  }
+  return objeto;
 }
 
 function tieneEmail (usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-if ( usuario.email){
+if (usuario.email){
   return true;
-}
-return false;
+  }
+  return false; 
 }
 
 function tienePropiedad (objeto, propiedad) {
@@ -77,10 +77,10 @@ function tienePropiedad (objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
- if (objeto[propiedad]){
+if (objeto[propiedad]){
   return true;
- }
- return false;
+  }
+  return false;
 }
 
   
@@ -89,10 +89,10 @@ function verificarPassword (usuario, password) {
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // Tu código:
- if ( password === usuario.password){
-        return true;
+ if (password === usuario.password){
+  return true;
  }
- return false;
+ return false; 
 }
 
 function actualizarPassword (usuario, nuevaPassword) {
@@ -104,7 +104,7 @@ function actualizarPassword (usuario, nuevaPassword) {
 }
 
 
-// usuario [amigos: "agus", "tomi", "romi", "jorge"];
+// usuario = { amigos: ["agus", "tomi", "romi", "jorge"]};
 function agregarAmigo (usuario, nuevoAmigo) {
   // "usuario" tiene una propiedad llamada "amigos" que es un array
   // Agrega "nuevoAmigo" al final de ese array
@@ -124,9 +124,9 @@ function pasarUsuarioAPremium (usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
-  for(let i = 0; i < usuarios.length; i++){
+  for( let i = 0; i < usuarios.length; i++){
     usuarios[i].esPremium = true;
-  }
+  } 
   return usuarios;
 }
 
@@ -141,10 +141,10 @@ function sumarLikesDeUsuario (usuario) {
   // Devuelve la suma
   // Tu código:
  let resultado = 0;
- for( let i = 0; i < usuario.posts.length; i++){
-  resultado = resultado + usuario.posts[i].likes;
- }
- return resultado;
+ for (let i = 0; i < usuario.posts.length; i++){
+   resultado = resultado + usuario.posts[i].likes;
+  }
+  return resultado;
 }
 
 function agregarMetodoCalculoDescuento (producto) {
@@ -157,14 +157,13 @@ function agregarMetodoCalculoDescuento (producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-  producto.calcularPrecioDescuento = function(){
-   return this.precio - (this.precio * this.porcentajeDeDescuento);
+   producto.calcularPrecioDescuento = function(){
+    return this.precio - (this.precio * this.porcentajeDeDescuento)
   } 
   return producto;
 }
-
 // No modificar nada debajo de esta línea
-// --------------------------------
+// -------------------------------- 
 
 module.exports = {
   crearGato,
